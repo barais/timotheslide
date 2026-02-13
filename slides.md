@@ -67,6 +67,11 @@ Le flux de données suit ce chemin :
 
 ---
 
+![](/archi.svg)
+
+
+---
+
 # 🔌 1. La Couche Matérielle (Edge)
 
 Basé sur le dépôt : `esphomesolarthermalpanel`
