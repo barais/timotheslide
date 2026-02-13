@@ -1,0 +1,75 @@
+<svg viewBox="0 0 1000 450" class="w-full h-auto min-w-[800px]" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Definitions for gradients and markers -->
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#9ca3af"></path>
+                        </marker>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1"></stop>
+                            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1"></stop>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- ZONE 1: INSTALLATION SOLAIRE (Local Technique) -->
+                    <rect x="20" y="50" width="280" height="350" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"></rect>
+                    <text x="40" y="80" font-family="sans-serif" font-weight="bold" fill="#475569">LOCAL TECHNIQUE</text>
+                    
+                    <!-- Régulateur Solaire -->
+                    <rect x="50" y="150" width="120" height="150" rx="5" fill="#334155"></rect>
+                    <text x="110" y="190" text-anchor="middle" fill="white" font-family="sans-serif" font-size="12">Régulateur</text>
+                    <text x="110" y="210" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">RESOL / Tech.</text>
+                    <!-- Port VBUS -->
+                    <circle cx="170" cy="225" r="5" fill="#ef4444"></circle>
+                    <text x="185" y="230" fill="#ef4444" font-size="10" font-weight="bold">VBUS</text>
+
+                    <!-- ZONE 2: GATEWAY SECURISEE (Edge) -->
+                    <rect x="350" y="130" width="220" height="190" rx="10" fill="white" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5"></rect>
+                    <text x="460" y="120" text-anchor="middle" font-family="sans-serif" font-weight="bold" fill="#3b82f6">GATEWAY SÉCURISÉE</text>
+                    
+                    <!-- Optocoupleur -->
+                    <rect x="370" y="180" width="60" height="90" rx="4" fill="#fef3c7" stroke="#d97706"></rect>
+                    <text x="400" y="215" text-anchor="middle" font-size="10" fill="#92400e">Opto</text>
+                    <text x="400" y="235" text-anchor="middle" font-size="9" fill="#92400e">ISOLATION</text>
+                    
+                    <!-- ESP32 -->
+                    <rect x="460" y="180" width="90" height="90" rx="4" fill="#1e293b"></rect>
+                    <text x="505" y="215" text-anchor="middle" fill="white" font-weight="bold">ESP32</text>
+                    <text x="505" y="235" text-anchor="middle" fill="#cbd5e1" font-size="10">ESPHome</text>
+
+                    <!-- Connection Regulator -> Opto -->
+                    <path d="M170 225 L370 225" stroke="#ef4444" stroke-width="2"></path>
+                    
+                    <!-- Connection Opto -> ESP32 -->
+                    <path d="M430 225 L460 225" stroke="#334155" stroke-width="2"></path>
+
+                    <!-- Lock Icon for Security -->
+                    <circle cx="430" cy="180" r="15" fill="#22c55e"></circle>
+                    <text x="430" y="185" text-anchor="middle" fill="white" font-family="FontAwesome" font-size="14"></text>
+
+                    <!-- ZONE 3: CLOUD / SERVEUR -->
+                    <rect x="700" y="50" width="280" height="350" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2"></rect>
+                    <text x="720" y="80" font-family="sans-serif" font-weight="bold" fill="#0369a1">SERVEUR CENTRAL</text>
+
+                    <!-- MQTT Broker -->
+                    <rect x="730" y="120" width="220" height="50" rx="5" fill="#fff" stroke="#cbd5e1"></rect>
+                    <text x="840" y="150" text-anchor="middle" fill="#334155" font-weight="bold">MQTT Broker</text>
+
+                    <!-- Database -->
+                    <rect x="730" y="190" width="220" height="50" rx="5" fill="#fff" stroke="#cbd5e1"></rect>
+                    <text x="840" y="220" text-anchor="middle" fill="#334155" font-weight="bold">TimescaleDB</text>
+
+                    <!-- Grafana -->
+                    <rect x="730" y="280" width="220" height="80" rx="5" fill="#ea580c"></rect>
+                    <text x="840" y="325" text-anchor="middle" fill="white" font-weight="bold" font-size="18">Grafana</text>
+
+                    <!-- Connection ESP32 -> Cloud (MQTT) -->
+                    <path class="data-flow" d="M550 225 L640 225 L640 145 L730 145" stroke="#3b82f6" stroke-width="3" fill="none"></path>
+                    <text x="640" y="200" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold"> MQTT (TLS)</text>
+
+                    <!-- Internal Cloud Connections -->
+                    <line x1="840" y1="170" x2="840" y2="190" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"></line>
+                    <line x1="840" y1="240" x2="840" y2="280" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"></line>
+
+                    <!-- Fleet Management Note -->
+                    <text x="840" y="420" text-anchor="middle" font-size="11" fill="#64748b" style="font-style: italic;">Déploiement via Infrastructure as Code</text>
+                </svg>
