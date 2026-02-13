@@ -4,13 +4,12 @@ theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
-info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
 download: true
-  Learn more at [Sli.dev](https://sli.dev)
+# some information about your slides (markdown enabled)
+title: Projet Timothe
+info: |
+  ## Projet Timothé
+  Architecture de Monitoring Solaire Thermique
 # apply UnoCSS classes to the current slide
 class: text-center
 
