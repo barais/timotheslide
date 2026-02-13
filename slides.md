@@ -9,11 +9,13 @@ title: Welcome to Slidev
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
-
+download: true
   Learn more at [Sli.dev](https://sli.dev)
 # apply UnoCSS classes to the current slide
 class: text-center
+
 # https://sli.dev/features/drawing
+
 drawings:
   persist: false
 # slide transition: https://sli.dev/guide/animations.html#slide-transitions
